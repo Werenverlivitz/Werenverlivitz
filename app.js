@@ -16,5 +16,5 @@ io.on('connection', function(socket) {
    });
 });
 
-serv.listen(process.env.PORT || 2000)
+io.listen(process.env.PORT || 2000)
 console.log("Server started.")
