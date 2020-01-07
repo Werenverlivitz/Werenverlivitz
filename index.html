@@ -4,4 +4,7 @@
   socket.on("msg",(e)=>{
     alert(e.data)
   })
+  document.onkeydown=()=>{
+    socket.emit("msg",{data:prompt("Enter your message.")})
+  }
 </script>
