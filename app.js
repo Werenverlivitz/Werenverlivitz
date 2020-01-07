@@ -8,6 +8,6 @@ app.get('/',(req,res){
 
 server.listen(3000)
 
-require('socket.io').listen(server).sockets.on('connection',(socket)=>{
+require('socket.io').listen(app).sockets.on('connection',(socket)=>{
   console.log('socket connection')
 })
