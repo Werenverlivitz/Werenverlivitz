@@ -13,6 +13,6 @@ console.log("Server started.")
 require('socket.io')(serv,{}).sockets.on('connection', (socket) => {
 	//socket.emit("msg",{data:"Hello world!"})
 	socket.on("msg",(e)=>{
-		socket.emit("msg",{data:e.data})
+		io.sockets.emit("msg",{data:e.data})
 	})
 })
