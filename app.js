@@ -1,13 +1,10 @@
-express = require('express')
-app = express()
-server = require('http').createServer(app)
+var express = require('express');
+var app = express();
+var serv = require('http').Server(app);
 
-app.get('/',(req,res){
-  res.sendFile(__dirname + 'index.html')
-})
+app.get('/',function(req, res) {
+	res.sendFile(__dirname + '/client/index.html');
+});
+app.use('/client',express.static(__dirname + '/client'));
 
-server.listen(3000)
-
-require('socket.io').listen(app).sockets.on('connection',(socket)=>{
-  console.log('socket connection')
-})
+serv.listen(2000);
