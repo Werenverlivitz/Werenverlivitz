@@ -10,7 +10,6 @@ app.use('/client',express.static(__dirname + '/client'))
 serv.listen(process.env.PORT || 2000);
 console.log("Server started.")
 
-io = require('socket.io')(serv,{});
-io.sockets.on('connection', (socket)=>{
+require('socket.io')(serv,{}).sockets.on('connection', (socket)=>{
 	console.log("Socket Connection")
 })
