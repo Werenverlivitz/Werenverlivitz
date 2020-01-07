@@ -7,9 +7,9 @@ app.get('/', (req, res) => {
 })
 app.use('/client',express.static(__dirname + '/client'))
 
-serv.listen(process.env.PORT || 2000);
+serv.listen(process.env.PORT || 2000)
 console.log("Server started.")
 
 require('socket.io')(serv,{}).sockets.on('connection', (socket) => {
-	console.log("Socket Connection")
+	socket.emit("msg",{data:"Hello world!"})
 })
