@@ -7,7 +7,9 @@ app.get('/', function(req, res) {
 });
 
 io.on('connection', function(socket) {
-   console.log("socket connection")
+   socket.on("msg",(e)=>{
+      socket.emit("msg",{data:e.data})
+   })
 })
 
 io.listen(process.env.PORT || 2000)
