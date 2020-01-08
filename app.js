@@ -7,7 +7,6 @@ app.get('/', (req, res)=>{
 })
 
 io.listen(process.env.PORT || 2000)
-console.log("Server started.")
 
 io.on('connection', (socket)=>{
    socket.on("msg",(e)=>{
