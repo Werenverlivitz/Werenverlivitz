@@ -2,7 +2,7 @@
 <script>
   socket=io()
   socket.on("msg",(e)=>{
-    alert(e.data)
+    console.log(e.user+":"+e.data)
   })
   document.onkeydown=()=>{
     socket.emit("msg",{data:prompt("Enter your message.")})
