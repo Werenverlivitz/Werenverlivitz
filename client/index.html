@@ -8,4 +8,9 @@
   document.onkeydown=()=>{
     socket.emit("msg",{data:prompt("Enter your message.")})
   }
+  render=()=>{
+    console.table(obj)
+    requestAnimationFrame(render)
+  }
+  render()
 </script>
