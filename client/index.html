@@ -7,14 +7,12 @@ init=()=>{
   socket.on("msg",(e)=>{
     obj[e.user]={msg:e.data}
   })
-  //Change the user object.
-  button1.onclick=()=>{
-    socket.emit("msg",{data:text1.value})
-  }
   render()
 }
-//Show all users with their variables.
 render=()=>{
+  //Change the user object.
+  socket.emit("msg",{data:text1.value})
+  //Show all users with their variables.
   console.table(obj)
   requestAnimationFrame(render)
 }
