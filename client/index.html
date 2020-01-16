@@ -1,8 +1,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script>
+  obj={}
   socket=io()
   socket.on("msg",(e)=>{
-    console.log(e.user+":"+e.data)
+    obj[e.user]={msg:e.data}
   })
   document.onkeydown=()=>{
     socket.emit("msg",{data:prompt("Enter your message.")})
