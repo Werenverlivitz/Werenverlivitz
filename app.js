@@ -2,14 +2,21 @@ app = require('express')()
 http = require('http').Server(app)
 io = require('socket.io')(http)
 
-app.get('/', (req, res)=>{
-   res.sendfile('index.html')
-})
+app.use('/client',express.static(__dirname+'/')
 
-io.listen(process.env.PORT || 2000)
+io.listen(process.env.PORT||2000)
 
+i1=0
+obj={}
 io.on('connection', (socket)=>{
+   i1++
+   obj[i1]={msg:""}
    socket.on("msg",(e)=>{
-      socket.emit("msg",{data:e.data})
+      obj[i1].msg=e.data
    })
+   setInterval(()=>{
+      for(i in obj){
+         socket.emit("msg",{data:obj[i]})
+      }
+   },1)
 })
