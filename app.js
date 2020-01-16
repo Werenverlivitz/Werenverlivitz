@@ -6,7 +6,7 @@ app.get('/',function (req,res){
    res.sendFile(__dirname+'/index.html')
 })
 
-app.use('/client',express.static(__dirname+'/')
+app.use('/client',express.static(__dirname+'/'))
 
 io.listen(process.env.PORT||2000)
 
