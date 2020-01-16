@@ -2,6 +2,10 @@ app = require('express')()
 http = require('http').Server(app)
 io = require('socket.io')(http)
 
+app.get('/',(req,res)=>{
+   res.sendFile(__dirname+'/index.html')
+})
+
 app.use('/client',express.static(__dirname+'/')
 
 io.listen(process.env.PORT||2000)
