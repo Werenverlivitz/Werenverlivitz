@@ -3,16 +3,16 @@
 init=()=>{
   obj={}
   socket=io()
+  //Store all users with their variables.
+  socket.on("msg",(e)=>{
+    obj[e.user]={msg:e.data}
+  })
   //Change the user object.
   button1.onclick=()=>{
     socket.emit("msg",{data:text1.value})
   }
   render()
 }
-//Store all users with their variables.
-socket.on("msg",(e)=>{
-  obj[e.user]={msg:e.data}
-})
 //Show all users with their variables.
 render=()=>{
   console.table(obj)
