@@ -13,6 +13,7 @@ render=()=>{
   //Change the user object.
   socket.emit("msg",{data:text1.value})
   //Show all users with their variables.
+  console.clear()
   console.table(obj)
   requestAnimationFrame(render)
 }
