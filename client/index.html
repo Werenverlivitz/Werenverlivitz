@@ -2,12 +2,15 @@
 <script>
   obj={}
   socket=io()
+  //Store all users with their variables.
   socket.on("msg",(e)=>{
     obj[e.user]={msg:e.data}
   })
+  //Change the user object.
   document.onkeydown=()=>{
     socket.emit("msg",{data:prompt("Enter your message.")})
   }
+  //Show all users with their variables.
   render=()=>{
     console.table(obj)
     requestAnimationFrame(render)
