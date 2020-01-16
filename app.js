@@ -1,6 +1,6 @@
 express = require('express')
 app = express()
-http = require('http').Server(app)
+http = require('http').createServer(app)
 io = require('socket.io')(http)
 
 app.get('/',function (req,res){
