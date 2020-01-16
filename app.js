@@ -2,7 +2,7 @@ app = require('express')()
 http = require('http').Server(app)
 io = require('socket.io')(http)
 
-app.get('/',(req,res)=>{
+app.get('/',function (req,res){
    res.sendFile(__dirname+'/index.html')
 })
 
@@ -12,7 +12,7 @@ io.listen(process.env.PORT||2000)
 
 i1=0
 obj={}
-io.on('connection', (socket)=>{
+io.on('connection', function (socket){
    i1++
    obj[i1]={msg:""}
    socket.on("msg",(e)=>{
