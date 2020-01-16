@@ -1,24 +1,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script>
-  init=()=>{
-    obj={}
-    socket=io()
-    //Store all users with their variables.
-    socket.on("msg",(e)=>{
-      obj[e.user]={msg:e.data}
-    })
-    //Change the user object.
-    button1.onclick=()=>{
-      socket.emit("msg",{data:text1.value})
-    }
-    //Show all users with their variables.
-    render=()=>{
-      console.table(obj)
-      requestAnimationFrame(render)
-    }
+init=()=>{
+  obj={}
+  socket=io()
+  //Change the user object.
+  button1.onclick=()=>{
+    socket.emit("msg",{data:text1.value})
   }
-  setTimeout(init,1)
   render()
+}
+//Store all users with their variables.
+socket.on("msg",(e)=>{
+  obj[e.user]={msg:e.data}
+})
+//Show all users with their variables.
+render=()=>{
+  console.table(obj)
+  requestAnimationFrame(render)
+}
+setTimeout(init,1)
 </script>
 <input type="text"id="text1">
 <input type="button"id="button1"value="Enviar">
