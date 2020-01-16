@@ -16,7 +16,7 @@ io.on('connection', (socket)=>{
    })
    setInterval(()=>{
       for(i in obj){
-         socket.emit("msg",{data:obj[i]})
+         socket.emit("msg",{user:i,data:obj[i]})
       }
    },1)
 })
