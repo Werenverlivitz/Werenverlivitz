@@ -19,7 +19,7 @@ io.sockets.on('connection', function(socket){
    i1++
    obj[i1]={iron:0,uranium:0,drillers:0,trucks:0,nukes:0}
    socket.on("msg",(e)=>{
-      obj[i1].msg=e.data
+      //obj[i1].msg=e.data
    })
    setInterval(()=>{
       for(i in obj){
