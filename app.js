@@ -32,5 +32,5 @@ io.sockets.on('connection', function(socket){
 	     nukes:obj[i].nukes
 	 })
       }
-   },1)
+   },1000)
 })
