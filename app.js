@@ -24,12 +24,12 @@ io.sockets.on('connection', function(socket){
    setInterval(()=>{
       for(i in obj){
          socket.emit("msg",{
-		 name:obj[i].name,
-		 user:i,iron:obj[i].iron,
-		 uranium:obj[i].uranium,
-		 drillers:obj[i].drillers,
-		 trucks:obj[i].trucks,
-		 nukes:obj[i].nukes
+	     name:obj[i].name,
+	     user:i,iron:obj[i].iron,
+	     uranium:obj[i].uranium,
+	     drillers:obj[i].drillers,
+	     trucks:obj[i].trucks,
+	     nukes:obj[i].nukes
 	 })
       }
    },1)
