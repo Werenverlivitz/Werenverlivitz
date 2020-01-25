@@ -83,13 +83,9 @@ setInterval(()=>{
   for(j=0;j<obj[i].drillers;j++){
    if(obj[i].iron<capacity&&Math.random()<0.5){
     obj[i].iron++
-   }else{
-    obj[i].iron--
    }
    if(obj[i].uranium<capacity&&Math.random()<0.01){
     obj[i].uranium++
-   }else{
-    obj[i].uranium--
    }
   }
  }
