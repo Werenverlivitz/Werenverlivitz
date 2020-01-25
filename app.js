@@ -49,6 +49,15 @@ io.sockets.on('connection', function(socket){
       obj[i1].nukes=0
    })
    setInterval(()=>{
+     socket.emit("you",{
+       name:obj[i1].name,
+       iron:obj[i1].iron,
+       uranium:obj[i1].uranium,
+       drillers:obj[i1].drillers,
+       trucks:obj[i1].trucks,
+       nukes:obj[i1].nukes,
+       teslatowers:obj[i1].teslatowers
+     })
       for(i in obj){
          socket.emit("msg",{
 	     user:i,
