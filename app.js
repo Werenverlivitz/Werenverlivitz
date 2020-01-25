@@ -29,7 +29,8 @@ io.sockets.on('connection', function(socket){
 	     uranium:obj[i].uranium,
 	     drillers:obj[i].drillers,
 	     trucks:obj[i].trucks,
-	     nukes:obj[i].nukes
+	     nukes:obj[i].nukes,
+	     teslatowers:obj[i].teslatowers
 	 })
       }
    },1000)
