@@ -35,6 +35,11 @@ io.sockets.on('connection', function(socket){
         obj[i1].nukes++
       }
    })
+   socket.on("attack",(e)=>{
+      if(obj[e.data].teslatowers<obj[i1].nukes){
+        delete obj[i1]
+      }
+   })
    setInterval(()=>{
       for(i in obj){
          socket.emit("msg",{
