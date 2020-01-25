@@ -78,7 +78,8 @@ setInterval(()=>{
      obj[i].uranium++
     }
    }else{
-    obj[i].iron=capacity
+    obj[i].iron--
+    obj[i].uranium--
    }
   }
  }
