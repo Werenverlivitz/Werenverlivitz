@@ -84,9 +84,9 @@ setInterval(()=>{
    if(obj[i].iron+obj[i].uranium<capacity){
     if(Math.random()<0.5){
      obj[i].iron++
-    }else{ if(Math.random()<0.01){
+    }else if(Math.random()<0.01){
      obj[i].uranium++
-    }}
+    }
    }else{
     obj[i].iron--
     obj[i].uranium--
