@@ -23,15 +23,20 @@ io.sockets.on('connection', function(socket){
    })
    socket.on("build",(e)=>{
       if(e.data=="drillers"&&100<=iron){
+        iron-=100
         obj[i1].drillers++
       }
       if(e.data=="trucks"&&20<=iron){
+        iron-=20
         obj[i1].trucks++
       }
       if(e.data=="teslatowers"&&20<=iron){
+        iron-=20
         obj[i1].teslatowers++
       }
       if(e.data=="nukes"&&20<=iron&&5<=uranium){
+        iron-=20
+        uranium-=5
         obj[i1].nukes++
       }
    })
