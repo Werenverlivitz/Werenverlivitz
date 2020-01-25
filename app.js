@@ -69,7 +69,7 @@ io.sockets.on('connection', function(socket){
 setInterval(()=>{
  for(i in obj){
   capacity=obj[i].trucks*1000
-  if(obj[i].iron<capacity){
+  if(obj[i].iron+obj[i].uranium<capacity){
    if(Math.random()<0.5){obj[i].iron+=obj[i].drillers}
    if(Math.random()<0.05){obj[i].uranium+=obj[i].drillers}
   }else{
