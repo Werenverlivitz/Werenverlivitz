@@ -43,7 +43,8 @@ io.sockets.on('connection', function(socket){
       }
    })
    socket.on("attack",(e)=>{
-      if(obj[e.data].teslatowers<obj[i1].nukes){
+      DefensePower=obj[e.data].teslatowers/1000
+      if(DefensePower<obj[i1].nukes){
         delete obj[i1]
       }
       obj[i1].nukes=0
