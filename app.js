@@ -54,6 +54,9 @@ io.sockets.on('connection', function(socket){
 	 })
       }
    },1000)
+   socket.on('disconnect',(e)=>{
+      delete obj[i1]
+   })
 })
 
 setInterval(()=>{
