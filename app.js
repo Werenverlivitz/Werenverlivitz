@@ -17,7 +17,7 @@ obj={}
 var io = require('socket.io')(serv,{});
 io.sockets.on('connection', function(socket){
    i1++
-   obj[i1]={name:"",iron:0,uranium:0,dynamite:0,drillers:0,trucks:0,nukes:0,antinukes:0}
+   obj[i1]={name:"",iron:0,uranium:0,drillers:0,trucks:0,nukes:0,teslatowers:0}
    socket.on("name",(e)=>{
       obj[i1].name=e.data
    })
