@@ -59,18 +59,18 @@ io.sockets.on('connection', function(socket){
        nukes:obj[i1].nukes,
        teslatowers:obj[i1].teslatowers
      })
-      for(i in obj){
-         socket.emit("msg",{
-	     user:i,
-	     name:obj[i].name,
-	     iron:obj[i].iron,
-	     uranium:obj[i].uranium,
-	     drillers:obj[i].drillers,
-	     trucks:obj[i].trucks,
-	     nukes:obj[i].nukes,
-	     teslatowers:obj[i].teslatowers
-	 })
-      }
+     for(i in obj){
+       socket.emit("msg",{
+         user:i,
+	 name:obj[i].name,
+	 iron:obj[i].iron,
+	 uranium:obj[i].uranium,
+	 drillers:obj[i].drillers,
+	 trucks:obj[i].trucks,
+	 nukes:obj[i].nukes,
+	 teslatowers:obj[i].teslatowers
+       })
+     }
    },1000)
    socket.on('disconnect',(e)=>{
       delete obj[i1]
