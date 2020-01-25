@@ -24,8 +24,9 @@ io.sockets.on('connection', function(socket){
    setInterval(()=>{
       for(i in obj){
          socket.emit("msg",{
+	     user:i,
 	     name:obj[i].name,
-	     user:i,iron:obj[i].iron,
+	     iron:obj[i].iron,
 	     uranium:obj[i].uranium,
 	     drillers:obj[i].drillers,
 	     trucks:obj[i].trucks,
@@ -35,3 +36,14 @@ io.sockets.on('connection', function(socket){
       }
    },1000)
 })
+
+setInterval(()=>{
+ for(i in obj){
+  capacity=obj[i].trucks*1000
+  if(obj[i].iron<capacity){
+   obj[i].iron+=obj[i].drillers
+  }else{
+   obj[i].iron=capacity
+  }
+ }
+},1000)
