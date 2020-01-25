@@ -17,9 +17,23 @@ obj={}
 var io = require('socket.io')(serv,{});
 io.sockets.on('connection', function(socket){
    i1++
-   obj[i1]={name:"",iron:0,uranium:0,drillers:0,trucks:0,nukes:0,teslatowers:0}
+   obj[i1]={name:"",iron:100,uranium:0,drillers:0,trucks:1,nukes:0,teslatowers:0}
    socket.on("name",(e)=>{
       obj[i1].name=e.data
+   })
+   socket.on("build",(e)=>{
+      if(e.data=="driller"&&100<=iron){
+        obj[i1].drillers++
+      }
+      if(e.data=="trucks"&&20<=iron){
+        obj[i1].trucks++
+      }
+      if(e.data=="teslatowers"&&20<=iron){
+        obj[i1].teslatowers++
+      }
+      if(e.data=="nukes"&&20<=iron&&5<=uranium){
+        obj[i1].nukes++
+      }
    })
    setInterval(()=>{
       for(i in obj){
@@ -41,7 +55,8 @@ setInterval(()=>{
  for(i in obj){
   capacity=obj[i].trucks*1000
   if(obj[i].iron<capacity){
-   obj[i].iron+=obj[i].drillers
+   if(Math.random()<0.5){obj[i].iron+=obj[i].drillers}
+   if(Math.random()<0.05){obj[i].uranium+=obj[i].drillers}
   }else{
    obj[i].iron=capacity
   }
