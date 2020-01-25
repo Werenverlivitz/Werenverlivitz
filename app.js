@@ -22,7 +22,7 @@ io.sockets.on('connection', function(socket){
       obj[i1].name=e.data
    })
    socket.on("build",(e)=>{
-      if(e.data=="driller"&&100<=iron){
+      if(e.data=="drillers"&&100<=iron){
         obj[i1].drillers++
       }
       if(e.data=="trucks"&&20<=iron){
