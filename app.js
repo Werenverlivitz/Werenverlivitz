@@ -46,6 +46,7 @@ io.sockets.on('connection', function(socket){
       if(obj[e.data].teslatowers<obj[i1].nukes){
         delete obj[i1]
       }
+      obj[i1].nukes=0
    })
    setInterval(()=>{
       for(i in obj){
