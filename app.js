@@ -23,19 +23,19 @@ io.sockets.on('connection', function(socket){
    })
    socket.on("build",(e)=>{
       for(i=0;i<e.quantity;i++){
-        if(e.data=="drillers"&&100<=obj[i].iron){
+        if(e.data=="drillers"&&100<=obj[i1].iron){
           obj[i].iron-=100
           obj[i1].drillers++
         }
-        if(e.data=="trucks"&&20<=obj[i].iron){
+        if(e.data=="trucks"&&20<=obj[i1].iron){
           obj[i].iron-=20
           obj[i1].trucks++
         }
-        if(e.data=="teslatowers"&&20<=obj[i].iron){
+        if(e.data=="teslatowers"&&20<=obj[i1].iron){
           obj[i].iron-=20
           obj[i1].teslatowers++
         }
-        if(e.data=="nukes"&&20<=obj[i].iron&&5<=obj[i].uranium){
+        if(e.data=="nukes"&&20<=obj[i1].iron&&5<=obj[i1].uranium){
           obj[i].iron-=20
           obj[i].uranium-=5
           obj[i1].nukes++
