@@ -1,21 +1,7 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pubnub/3.7.7/pubnub.js"></script>
 <script>
-init=()=>{
-  obj={}
-  socket=io()
-  //Store all users with their variables.
-  socket.on("msg",(e)=>{
-    obj[e.user]={msg:e.data}
+  PUBNUB_demo = PUBNUB.init({
+    publish_key: 'demo',
+    subscribe_key: 'demo'
   })
-  render()
-}
-render=()=>{
-  //Change the user object.
-  socket.emit("msg",{data:text1.value})
-  //Show all users with their variables.
-  console.table(obj)
-  requestAnimationFrame(render)
-}
-setTimeout(init,1)
 </script>
-<input type="text"id="text1">
