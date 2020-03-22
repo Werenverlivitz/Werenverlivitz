@@ -41,10 +41,10 @@ f=(operation,operand1,operand2)=>{
   }
 }
 showHelp=()=>{
-  console.log("Showing available commands here ;) : ")
-  console.log("get: gets the element of a part of your document")
-  console.log("calc: executes a line of javascript code")
-  console.log("rend: creates a render function executing a line of javascript code")
-  console.log("log: log a text string in the console")
-  console.log("pow: calculates a pow between 2 numbers")
+  f("log","Showing available commands here ;) : ")
+  f("log","get: gets the element of a part of your document")
+  f("log","calc: executes a line of javascript code")
+  f("log","rend: creates a render function executing a line of javascript code")
+  f("log","log: log a text string in the console")
+  f("log","pow: calculates a pow between 2 numbers")
 }
