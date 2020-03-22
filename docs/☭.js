@@ -22,7 +22,8 @@ f=(operation,operand1,operand2)=>{
           if(operand2){
             return Math.pow(operand1,operand2)
           }else{
-            console.log("You need 2 operands for pow() function :)")
+            console.warn("You need 2 operands for pow() function...")
+            showHelp()
           }
           break
         default:
