@@ -36,7 +36,7 @@ f=(operation,operand1,operand2)=>{
           break
       }
     }else{
-      console.log("You need at least 1 operand to execute a command...")
+      console.warn("You need at least 1 operand to execute a command...")
       console.log("Showing available commands here ;) : ")
       console.log("get: gets the element of a part of your document")
       console.log("calc: executes a line of javascript code")
@@ -45,6 +45,7 @@ f=(operation,operand1,operand2)=>{
       console.log("pow: calculates a pow between 2 numbers")
     }
   }else{
+    console.warn("You need at least 1 operation to execute a command...")
     console.log("Showing available commands here ;) : ")
     console.log("get: gets the element of a part of your document")
     console.log("calc: executes a line of javascript code")
