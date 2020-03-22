@@ -1,16 +1,16 @@
-f=(operation,operand1)=>{
+f=(operation,operand)=>{
   switch(operation){
     case "get":
-      return document.getElementById(operand1);
+      return document.getElementById(operand);
       break;
     case "calc":
-      return eval(operand1);
+      return eval(operand);
       break;
     case "rend":
-      r=()=>{requestAnimationFrame(this);eval(operand1)};r();
+      r=()=>{requestAnimationFrame(this);eval(operand)};r();
       break;
     case "log":
-      console.log(operand1)
+      console.log(operand)
       break;
     default:
       console.warn("Incorrect command.")
