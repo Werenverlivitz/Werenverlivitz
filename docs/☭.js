@@ -19,7 +19,7 @@ f=(operation,operand1,operand2)=>{
         break;
       case "pow":
         if(operand2){
-          return Mat.pow(operand1,operand2)
+          return Math.pow(operand1,operand2)
         }else{
           console.log("You need 2 operands for pow() function :)")
         }
