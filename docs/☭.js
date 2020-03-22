@@ -1,5 +1,7 @@
 f=(p1)=>{
   if(p1=="☭"){
-    alert("Hello world!")
+    console.log("Good luck, comrade ;)")
+  }else{
+    console.error("Capitalist idiots banned here.")
   }
 }
