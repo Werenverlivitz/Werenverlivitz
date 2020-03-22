@@ -27,30 +27,23 @@ f=(operation,operand1,operand2)=>{
           break
         default:
           console.warn("Incorrect command.")
-          console.log("Showing available commands here ;) : ")
-          console.log("get: gets the element of a part of your document")
-          console.log("calc: executes a line of javascript code")
-          console.log("rend: creates a render function executing a line of javascript code")
-          console.log("log: log a text string in the console")
-          console.log("pow: calculates a pow between 2 numbers")
+          showHelp()
           break
       }
     }else{
       console.warn("You need at least 1 operand to execute a command...")
-      console.log("Showing available commands here ;) : ")
-      console.log("get: gets the element of a part of your document")
-      console.log("calc: executes a line of javascript code")
-      console.log("rend: creates a render function executing a line of javascript code")
-      console.log("log: log a text string in the console")
-      console.log("pow: calculates a pow between 2 numbers")
+      showHelp()
     }
   }else{
     console.warn("You need at least 1 operation to execute a command...")
-    console.log("Showing available commands here ;) : ")
-    console.log("get: gets the element of a part of your document")
-    console.log("calc: executes a line of javascript code")
-    console.log("rend: creates a render function executing a line of javascript code")
-    console.log("log: log a text string in the console")
-    console.log("pow: calculates a pow between 2 numbers")
+    showHelp()
   }
+}
+showHelp=()=>{
+  console.log("Showing available commands here ;) : ")
+  console.log("get: gets the element of a part of your document")
+  console.log("calc: executes a line of javascript code")
+  console.log("rend: creates a render function executing a line of javascript code")
+  console.log("log: log a text string in the console")
+  console.log("pow: calculates a pow between 2 numbers")
 }
