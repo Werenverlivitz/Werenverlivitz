@@ -1,4 +1,4 @@
-f=(politics,operation,operand1)=>{
+f=(operation,operand1)=>{
   switch(operation){
     case "get":
       return document.getElementById(operand1);
