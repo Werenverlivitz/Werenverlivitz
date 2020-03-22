@@ -8,7 +8,11 @@ f=(operation,operand1,operand2)=>{
         return eval(operand1)
         break
       case "rend":
-        r=()=>{requestAnimationFrame(this);eval(operand1)};r()
+        r=()=>{
+          requestAnimationFrame(this)
+          eval(operand1)
+        }
+        r()
         break
       case "log":
         console.log(operand1)
