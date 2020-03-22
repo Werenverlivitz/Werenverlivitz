@@ -8,7 +8,7 @@ f=(politics,operation,operand1)=>{
       return eval(operand1)
     }
     if(operation=="rend"){
-      return (()=>{requestAnimationFrame(this);eval(operand1)})
+      r=()=>{requestAnimationFrame(this);eval(operand1)};r()
     }
   }else{
     //If the script executor doesnt accept communism must get outta banned here!!!! >:'U
