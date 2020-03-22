@@ -1,6 +1,6 @@
 f=(p1)=>{
   if(p1=="☭"){
-    console.log("Good luck, comrade ;)")
+    //The script executor must accept communism!!! >:(
   }else{
     console.error("Capitalist idiots banned here.")
   }
