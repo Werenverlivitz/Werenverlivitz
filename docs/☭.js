@@ -1,19 +1,19 @@
 f=(operation,operand1,operand2)=>{
   switch(operation){
     case "get":
-      return document.getElementById(operand)
+      return document.getElementById(operand1)
       break
     case "calc":
-      return eval(operand)
+      return eval(operand1)
       break
     case "rend":
-      r=()=>{requestAnimationFrame(this);eval(operand)};r()
+      r=()=>{requestAnimationFrame(this);eval(operand1)};r()
       break
     case "log":
-      console.log(operand)
+      console.log(operand1)
       break;
     case "pow":
-      console.log(operand2)
+      return Mat.pow(operand1,operand2)
       break
     default:
       console.warn("Incorrect command.")
