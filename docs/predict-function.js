@@ -1,6 +1,6 @@
 s1=document.createElement("script")
 s1.src="https://werenverlivitz.github.io/werenverlivitz/brain-controller-v2.js"
-s1.head.appendChild(s1)
+document.head.appendChild(s1)
 
 predict=(training,steps)=>{
     //Init the training network:
