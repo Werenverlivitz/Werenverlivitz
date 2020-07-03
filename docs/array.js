@@ -65,5 +65,16 @@ faucets=[
   "https://kryptogator.com/",
   "https://mismonedasvirtuales.net/Faucetbtc/",
   "https://faucetcoin.net/",
-  "https://ptc.link/"
+  "https://ptc.link/",
+  "https://earnfree-dgb.xyz/",
+  "https://darkusd.com/",
+  "https://applebtc.fun/",
+  "https://www.flashfaucet.com/",
+  "https://www.flashfaucet.com/",
+  "http://faucet.satoshi-hunter.space/?r=1MF3VG4jtPeHstQCBXZ4Tf2y5iMcgpFcHB",
+  "https://sato.my.id/?ref=FaucetpayDOGECOINHOST",
+  "https://free-eth.xyz/",
+  "https://faucethero.com/faucet/energycoinbit",
+  "https://bitcoinfaucet.fun/",
+  "https://faucetcoins.xyz/litecoin/"
 ]
