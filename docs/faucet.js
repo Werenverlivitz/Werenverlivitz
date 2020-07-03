@@ -1,4 +1,14 @@
-start=async()=>{
+render=()=>{
+  totalWidth=0
+  for(i=1;i<=4;i++){
+    totalWidth+=document.getElementById("nav"+i).clientHeight
+  }
+  iframe1.width=innerWidth
+  iframe1.height=innerHeight-totalWidth
+  quantity.innerHTML="Showing faucet: "+eval(focus+1)+" of "+eval(faucets.length+1)+"."
+  requestAnimationFrame(render)
+}
+onload=()=>{
   focus=0
   render()
   iframe1.src=faucets[0]
@@ -30,14 +40,3 @@ start=async()=>{
     window.open(faucets[focus])
   }
 }
-render=async()=>{
-  totalWidth=0
-  for(i=1;i<=4;i++){
-    totalWidth+=document.getElementById("nav"+i).clientHeight
-  }
-  iframe1.width=innerWidth
-  iframe1.height=innerHeight-totalWidth
-  quantity.innerHTML="Showing faucet: "+eval(focus+1)+" of "+eval(faucets.length+1)+"."
-  requestAnimationFrame(render)
-}
-setTimeout(start,1)
