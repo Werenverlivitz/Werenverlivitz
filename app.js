@@ -14,5 +14,7 @@ console.log("Server started.")
 
 var io = require('socket.io')(serv,{})
 io.sockets.on('connection', function(socket){
-   
+  socket.on("msg",(e)=>{
+    socket.broadcast.emit("msg",{data:e.data})
+  })
 })
