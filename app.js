@@ -13,7 +13,7 @@ serv.listen(process.env.PORT || 2000)
 console.log("Server started.")
 
 var io = require('socket.io')(serv,{})
-io.sockets.on('connection', function(socket){
+io.sockets.on('connection', (socket)=>{
   socket.on("msg",(e)=>{
     socket.broadcast.emit("msg",{data:e.data})
   })
