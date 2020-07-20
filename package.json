@@ -1,18 +1,10 @@
 {
-  "name": "project",
+  "name": "bot31",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.13.4",
-    "socket.io": "^1.4.5"
-  },
-  "engines": {
-    "node": "4.1.x"
-  },
-  "devDependencies": {},
+  "main": "bot31.js",
   "scripts": {
-	"start": "node app.js"
+    "test": "node bot31.js"
   },
   "author": "",
   "license": "ISC"
