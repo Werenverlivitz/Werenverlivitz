@@ -12,6 +12,9 @@ onload=()=>{
   focus=0
   render()
   iframe1.src=faucets[0]
+  if((!LS_BANNER_1276)&&(!LS_BANNER_1277)){
+    location.replace('https://www.google.es/')
+	}
   prev.onclick=()=>{
     if(0<focus){
       focus--
