@@ -5,7 +5,6 @@ render=()=>{
   }
   iframe1.width=innerWidth
   iframe1.height=innerHeight-totalWidth
-  document.getElementById("locator").innerHTML="Showing faucet: "+eval(focus+1)+" of "+eval(faucets.length+1)+"."
   requestAnimationFrame(render)
 }
 onload=()=>{
